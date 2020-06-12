@@ -15,6 +15,7 @@ const userRouter = require('./routes/userRoutes.js');
 const cardRouter = require('./routes/cardRoutes.js');
 const viewRouter = require('./routes/viewRoutes.js');
 
+// démarage express
 const app = express();
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
