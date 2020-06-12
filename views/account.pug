@@ -1,0 +1,58 @@
+extends base
+
+
+
+block content
+    header.header
+        .header-logo
+            a(href='/overview')
+                svg.icon-logo(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 24 24')
+                    path(d='M0 0h24v24H0z' fill='none')
+                    path(d='M2.53 19.65l1.34.56v-9.03l-2.43 5.86c-.41 1.02.08 2.19 1.09 2.61zm19.5-3.7L17.07 3.98c-.31-.75-1.04-1.21-1.81-1.23-.26 0-.53.04-.79.15L7.1 5.95c-.75.31-1.21 1.03-1.23 1.8-.01.27.04.54.15.8l4.96 11.97c.31.76 1.05 1.22 1.83 1.23.26 0 .52-.05.77-.15l7.36-3.05c1.02-.42 1.51-1.59 1.09-2.6zM7.88 8.75c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-2 11c0 1.1.9 2 2 2h1.45l-3.45-8.34v6.34z')
+                h1 FidBook
+        .burger
+            a(href='/menu')
+                svg.icon-burger(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 24 24' fill='black')
+                    path(d='M0 0h24v24H0z' fill='none')
+                    path(d='M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z')
+        ul.nav-bar
+            li
+                a#logoutbtn(href='#')
+                    div Log Out
+            li
+                a(href='/about')
+                    div About us
+            li
+                a(href='/changeMyPassword')
+                    div Change my password
+    main.main
+        .container-signup-form
+            .subtitle-container
+                h2.subtitle Settings
+                span.subtitle-sub About me
+            form.signup-form
+                .form-group
+                    label(for='email') Email address
+                    input#email(type='email' name='email' required='' placeholder='Your email' value=`${user.email}`)
+                .form-group
+                    label(for='name') name
+                    input#name(type='text' name='name' required='' placeholder='Benoit' value=`${user.name}`)
+                .form-group
+                    button.btn.btn--blue#modify-account Save change
+                    
+                .form-group
+                    a.btn-sign-up-link.btn.btn--blue#change-password(href="/changeMyPassword")  Change my password
+                    
+    footer.footer
+        ul
+            li
+                a(href='/about')
+                    svg.icon-info(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 24 24')
+                        path(d='M0 0h24v24H0z' fill='none')
+                        path(d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z')
+            
+            li
+                a(href='/changeMyPassword')
+                    svg.icon-lock(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 24 24')
+                        path(d='M0 0h24v24H0z' fill='none')
+                        path(d='M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z')

@@ -1,0 +1,48 @@
+extends base
+
+
+
+block content
+    header.header
+        .header-logo
+            a(href='/overview')
+                svg.icon-logo(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 24 24')
+                    path(d='M0 0h24v24H0z' fill='none')
+                    path(d='M2.53 19.65l1.34.56v-9.03l-2.43 5.86c-.41 1.02.08 2.19 1.09 2.61zm19.5-3.7L17.07 3.98c-.31-.75-1.04-1.21-1.81-1.23-.26 0-.53.04-.79.15L7.1 5.95c-.75.31-1.21 1.03-1.23 1.8-.01.27.04.54.15.8l4.96 11.97c.31.76 1.05 1.22 1.83 1.23.26 0 .52-.05.77-.15l7.36-3.05c1.02-.42 1.51-1.59 1.09-2.6zM7.88 8.75c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-2 11c0 1.1.9 2 2 2h1.45l-3.45-8.34v6.34z')
+                h1 FidBook
+        .burger
+            a(href='/menu')
+                svg.icon-burger(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 24 24' fill='black')
+                    path(d='M0 0h24v24H0z' fill='none')
+                    path(d='M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z')
+        ul.nav-bar
+            li
+                a#logoutbtn(href='#')
+                    div Log Out
+            li
+                a(href='/about')
+                    div About us
+            li
+                a(href='/me')
+                    div My settings
+    main.main
+        .main-menu-container
+            .about-text
+                | Ce site a &eacute;t&eacute; r&eacute;alis&eacute; dans le cadre de l&apos;UE NFA036
+                | projet par Weil Benoit
+            .about-text
+                | This site has been created within the context of
+                | UE NFA036 project by Weil Benoit
+            .about-text
+                a(href='mailto:fidbookcnam@gmail.com?subject=[bycontactme]')
+                    svg.icon-email(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 24 24')
+                        path(d='M0 0h24v24H0z' fill='none')
+                        path(d='M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z')
+                        span Me contacter
+    footer.footer
+        ul
+            li
+                a(href='/overview')
+                    svg.icon-back(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 24 24')
+                        path(d='M0 0h24v24H0V0z' fill='none' opacity='.87')
+                        path(d='M17.51 3.87L15.73 2.1 5.84 12l9.9 9.9 1.77-1.77L9.38 12l8.13-8.13z')
