@@ -1,5 +1,5 @@
 const nodemailer = require('nodemailer');
-const { response } = require('express');
+
 const pug = require('pug');
 const htmlToText = require('html-to-text');
 
@@ -52,7 +52,7 @@ module.exports = class Email {
   }
 
   async sendWelcome() {
-    await this.send('welcome', 'Welcome to the Natours family!');
+    await this.send('welcome', 'Welcome to the FidBook family!');
   }
 
   async sendPasswordReset() {
