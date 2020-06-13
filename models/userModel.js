@@ -20,6 +20,11 @@ const userSchema = new mongoose.Schema({
     enum: ['white', 'dark'],
     default: 'dark',
   },
+  language: {
+    type: String,
+    enum: ['english'],
+    default: 'english',
+  },
   role: {
     type: String,
     enum: ['user', 'admin'],
