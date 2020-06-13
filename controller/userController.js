@@ -29,7 +29,13 @@ exports.updateMe = catchAsync(async (req, res, next) => {
     );
   }
   // 2 filtrer la requete
-  const filteredBody = filterObj(req.body, 'name', 'email');
+  const filteredBody = filterObj(
+    req.body,
+    'name',
+    'email',
+    'theme',
+    'language'
+  );
   // 2 mise a jour du document
   const updatedUser = await User.findByIdAndUpdate(req.user.id, filteredBody, {
     new: true,
