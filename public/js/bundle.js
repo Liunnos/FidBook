@@ -8506,15 +8506,14 @@ var logout = /*#__PURE__*/function () {
       while (1) {
         switch (_context3.prev = _context3.next) {
           case 0:
-            console.log('je suis la');
-            _context3.prev = 1;
-            _context3.next = 4;
+            _context3.prev = 0;
+            _context3.next = 3;
             return (0, _axios.default)({
               method: 'GET',
               url: '/api/v1/users/logout'
             });
 
-          case 4:
+          case 3:
             res = _context3.sent;
 
             if (res.data.status === 'success') {
@@ -8524,20 +8523,20 @@ var logout = /*#__PURE__*/function () {
               }, 1500);
             }
 
-            _context3.next = 11;
+            _context3.next = 10;
             break;
 
-          case 8:
-            _context3.prev = 8;
-            _context3.t0 = _context3["catch"](1);
+          case 7:
+            _context3.prev = 7;
+            _context3.t0 = _context3["catch"](0);
             (0, _alerts.showAlert)('error', 'Error logging out ! Try again');
 
-          case 11:
+          case 10:
           case "end":
             return _context3.stop();
         }
       }
-    }, _callee3, null, [[1, 8]]);
+    }, _callee3, null, [[0, 7]]);
   }));
 
   return function logout() {
@@ -12604,7 +12603,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52878" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57819" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

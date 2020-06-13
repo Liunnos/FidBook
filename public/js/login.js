@@ -49,7 +49,6 @@ export const signup = async (email, name, password, passwordConfirm) => {
 };
 
 export const logout = async () => {
-  console.log('je suis la');
   try {
     const res = await axios({
       method: 'GET',
